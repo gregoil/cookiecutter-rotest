@@ -1,0 +1,4 @@
+rotest
+{%- if 'postgresql' in cookiecutter.db_type %}
+psycopg2==2.5.4
+{%- endif %}
