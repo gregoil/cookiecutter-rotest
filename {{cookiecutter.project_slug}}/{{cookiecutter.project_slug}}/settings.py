@@ -41,7 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'resources',
+    '{{ cookiecutter.project_slug }}.resources',
 )
 
 MIDDLEWARE_CLASSES = (
