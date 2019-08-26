@@ -1,6 +1,7 @@
 {
   "project_name": "Rotest Boilerplate",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "app_name": "{{ cookiecutter.project_slug }}_resources",
   "version": "0.1.0",
   "db_type": ["sqlite3", "postgresql_psycopg2"],
   "server_host": "localhost",
