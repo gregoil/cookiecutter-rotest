@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = (
     'rotest.core',
     'rotest.management',
+    'channels',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -106,3 +107,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+from rotest.common.django_utils.settings import CHANNEL_LAYERS, ASGI_APPLICATION
