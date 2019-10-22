@@ -83,7 +83,11 @@ WSGI_APPLICATION = '{{ cookiecutter.project_slug }}.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.{{ cookiecutter.db_type }}',
+        {%- if 'postgresql' in cookiecutter.db_type %}
+        'NAME': 'rotest',
+        {%- else %}
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        {%- endif %}
         'TEST_NAME': 'rotest_test',
     }
 }
