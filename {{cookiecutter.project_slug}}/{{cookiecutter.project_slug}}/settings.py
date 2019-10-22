@@ -109,3 +109,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 from rotest.common.django_utils.settings import CHANNEL_LAYERS, ASGI_APPLICATION
+
+ROTEST_HOST = "{{ cookiecutter.server_host }}"
+ROTEST_SERVER_PORT = {{ cookiecutter.server_port }}
+SHELL_STARTUP_COMMANDS = []
+ROTEST_WORK_DIR = "~/{{ cookiecutter.project_slug }}"

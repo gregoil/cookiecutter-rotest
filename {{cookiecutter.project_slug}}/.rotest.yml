@@ -1,7 +1,0 @@
-rotest:
-  host: {{ cookiecutter.server_host }}
-  port: {{ cookiecutter.server_port }}
-  workdir: ~/{{ cookiecutter.project_slug }}
-  django_settings: {{ cookiecutter.project_slug }}.settings
-  discoverer_blacklist: [""]
-  shell_startup_commands: []
