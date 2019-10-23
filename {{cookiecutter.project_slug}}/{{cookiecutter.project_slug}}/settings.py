@@ -15,6 +15,10 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+ROTEST_HOST = "{{ cookiecutter.server_host }}"
+ROTEST_SERVER_PORT = {{ cookiecutter.server_port }}
+SHELL_STARTUP_COMMANDS = []
+ROTEST_WORK_DIR = "~/{{ cookiecutter.project_slug }}"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -113,8 +117,3 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 from rotest.common.django_utils.settings import CHANNEL_LAYERS, ASGI_APPLICATION
-
-ROTEST_HOST = "{{ cookiecutter.server_host }}"
-ROTEST_SERVER_PORT = {{ cookiecutter.server_port }}
-SHELL_STARTUP_COMMANDS = []
-ROTEST_WORK_DIR = "~/{{ cookiecutter.project_slug }}"
