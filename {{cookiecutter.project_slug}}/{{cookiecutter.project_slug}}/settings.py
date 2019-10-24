@@ -116,4 +116,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-from rotest.common.django_utils.settings import CHANNEL_LAYERS, ASGI_APPLICATION
+# Set channel layers
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'asgiref.inmemory.ChannelLayer',
+        'ROUTING': 'rotest.common.django_utils.routing.channel_routing',
+    }
+}
+ASGI_APPLICATION = "rotest.management"
